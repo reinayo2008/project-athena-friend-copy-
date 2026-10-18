@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+moderator_data/
+student_accounts.sqlite3*
+render_public/
