@@ -1,6 +1,0 @@
-.env
-.env.example
-moderator_data/
-__pycache__/
-*.py[cod]
-.venv/
