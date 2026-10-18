@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATHENA.AI</title>
+    <link rel="stylesheet" href="ATHENA.css" />
+  </head>
+  <body class="home-page">
+    <div class="starfield" data-star-count="100" aria-hidden="true">
+      <span class="background-star star-one"></span>
+      <span class="background-star star-two"></span>
+      <span class="background-star star-three"></span>
+      <span class="background-star star-four"></span>
+      <span class="background-star star-five"></span>
+      <span class="background-star star-six"></span>
+      <span class="background-star star-seven"></span>
+      <span class="background-star star-eight"></span>
+      <span class="background-star star-nine"></span>
+      <span class="background-star star-ten"></span>
+    </div>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="settings-nav-button background-shortcut" href="settings.html#background-settings">Background</a>
+        <div class="brand" id="welcomeLabel" aria-live="polite">Welcome, guest</div>
+      </header>
+
+      <main class="main-content">
+        <div class="title-block">
+          <div class="hero-logo-frame">
+            <img class="brand-logo" src="image-1791727904673.png" alt="ATHENA.AI" />
+          </div>
+          <h2>What's on your mind</h2>
+        </div>
+
+        <div class="auth-panel" aria-label="Account options">
+          <a class="auth-btn login-btn" href="student-access.html">Student sign in</a>
+          <a class="auth-btn create-btn" href="moderator.html">Admin sign in</a>
+        </div>
+
+        <p id="accountStatus" class="account-status" role="status" aria-live="polite">Choose an account to continue.</p>
+
+        <div class="choices" aria-label="Main choices">
+          <a class="choice-btn primary" id="chatBtn" href="page2.html">Chat with Athena.AI</a>
+          <a class="choice-btn settings-choice" href="settings.html">Settings</a>
+          <a class="choice-btn" href="support.html#hotlines">Hotlines</a>
+          <a class="choice-btn" href="support.html#feedback">Help &amp; Feedback</a>
+          <a class="choice-btn" href="support.html#more">More</a>
+        </div>
+      </main>
+
+      <div class="theme-panel" aria-label="Background options">
+        <span class="theme-label">Background</span>
+        <div class="theme-swatches" role="group" aria-label="Choose a background theme">
+          <button class="theme-swatch" type="button" data-theme="warm" aria-label="Warm sunset" aria-pressed="true" title="Warm sunset"></button>
+          <button class="theme-swatch" type="button" data-theme="meadow" aria-label="Soft meadow" aria-pressed="false" title="Soft meadow"></button>
+          <button class="theme-swatch" type="button" data-theme="sky" aria-label="Blue sky" aria-pressed="false" title="Blue sky"></button>
+          <button class="theme-swatch" type="button" data-theme="rose" aria-label="Rose garden" aria-pressed="false" title="Rose garden"></button>
+          <button class="theme-swatch" type="button" data-theme="sunrise" aria-label="Sunrise" aria-pressed="false" title="Sunrise"></button>
+          <button class="theme-swatch" type="button" data-theme="noon" aria-label="Noon" aria-pressed="false" title="Noon"></button>
+          <button class="theme-swatch" type="button" data-theme="afternoon" aria-label="Afternoon" aria-pressed="false" title="Afternoon"></button>
+          <button class="theme-swatch" type="button" data-theme="evening" aria-label="Evening" aria-pressed="false" title="Evening"></button>
+          <button class="theme-swatch" type="button" data-theme="midnight" aria-label="Midnight" aria-pressed="false" title="Midnight"></button>
+          <button class="theme-swatch" type="button" data-theme="rainbow" aria-label="Rainbow" aria-pressed="false" title="Rainbow"></button>
+        </div>
+        <div class="custom-presets" id="customPresets" hidden>
+          <span class="theme-label">My presets</span>
+          <div class="custom-preset-list" id="customPresetList" role="group" aria-label="Saved custom background presets"></div>
+        </div>
+        <details class="background-editor">
+          <summary>Customize</summary>
+          <div class="background-controls" aria-label="Custom background colors">
+            <label class="color-control" for="skyColor">
+              <span>Sky</span>
+              <input class="background-color" id="skyColor" type="color" value="#f7e8d6" />
+            </label>
+            <label class="color-control" for="bgColor">
+              <span>Main</span>
+              <input class="background-color" id="bgColor" type="color" value="#f5e7d8" />
+            </label>
+            <label class="color-control" for="groundColor">
+              <span>Ground</span>
+              <input class="background-color" id="groundColor" type="color" value="#e6d4c3" />
+            </label>
+            <label class="color-control" for="landscapeColor">
+              <span>Landscape</span>
+              <input class="background-color" id="landscapeColor" type="color" value="#537158" />
+            </label>
+            <label class="star-color-control" for="starColor">
+              <span>Stars</span>
+              <input id="starColor" type="color" value="#fff0a8" aria-label="Choose star color" />
+            </label>
+            <div class="custom-preset-creator">
+              <label class="visually-hidden" for="customPresetName">Custom preset name</label>
+              <input id="customPresetName" type="text" maxlength="24" placeholder="Name this background" autocomplete="off" />
+              <button class="background-action-btn" id="saveCustomPresetBtn" type="button">Save preset</button>
+            </div>
+            <div class="background-actions">
+              <button class="background-action-btn save-background-btn" id="saveBackgroundBtn" type="button">Save</button>
+              <button class="background-action-btn" id="resetBackgroundBtn" type="button">Reset</button>
+            </div>
+            <p class="background-status" id="backgroundStatus" role="status" aria-live="polite"></p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <script src="preferences.js"></script>
+    <script src="stars.js"></script>
+    <script src="cursor-trail.js"></script>
+    <script src="athena-config.js"></script>
+    <script src="ATHENA.js"></script>
+  </body>
+</html>
