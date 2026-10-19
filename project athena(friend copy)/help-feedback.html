@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help &amp; Feedback | ATHENA.AI</title>
+    <link rel="stylesheet" href="ATHENA.css" />
+  </head>
+  <body class="settings-body">
+    <div class="page-shell support-page-shell">
+      <header class="settings-topbar">
+        <a class="brand-logo-frame" href="ATHENA.html" aria-label="ATHENA.AI home">
+          <img class="brand-logo" src="image-1791727904673.png" alt="ATHENA.AI" />
+        </a>
+        <nav class="settings-page-actions" aria-label="Page navigation">
+          <a class="settings-nav-button" href="hotlines.html">Hotlines</a>
+          <a class="settings-nav-button" href="more.html">More</a>
+          <a class="settings-nav-button" href="ATHENA.html">Home</a>
+        </nav>
+      </header>
+      <main class="settings-main support-main">
+        <h1>Help &amp; Feedback</h1>
+        <p>Write a note you can share with your teacher or Athena project team.</p>
+        <form class="feedback-form" id="feedbackForm">
+          <label for="feedbackMessage">Your note</label>
+          <textarea id="feedbackMessage" maxlength="2000" placeholder="Write a question or feedback note"></textarea>
+          <button class="background-action-btn" type="submit">Copy note</button>
+          <p class="feedback-status" id="feedbackStatus" role="status" aria-live="polite"></p>
+        </form>
+      </main>
+    </div>
+    <script src="preferences.js"></script>
+    <script src="stars.js"></script>
+    <script src="cursor-trail.js"></script>
+    <script>
+      document.getElementById('feedbackForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const message = document.getElementById('feedbackMessage').value.trim();
+        const status = document.getElementById('feedbackStatus');
+        if (!message) {
+          status.textContent = 'Write a note first.';
+          return;
+        }
+        try {
+          await navigator.clipboard.writeText(message);
+          status.textContent = 'Note copied.';
+        } catch {
+          status.textContent = 'Clipboard access is unavailable in this browser.';
+        }
+      });
+    </script>
+  </body>
+</html>
