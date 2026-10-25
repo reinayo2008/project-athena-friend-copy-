@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student access | ATHENA.AI</title>
+    <link rel="stylesheet" href="ATHENA.css?v=student-access-1" />
+  </head>
+  <body class="home-page student-access-page">
+    <div class="starfield" data-star-count="100" aria-hidden="true">
+      <span class="background-star star-one"></span>
+      <span class="background-star star-two"></span>
+      <span class="background-star star-three"></span>
+      <span class="background-star star-four"></span>
+      <span class="background-star star-five"></span>
+      <span class="background-star star-six"></span>
+      <span class="background-star star-seven"></span>
+      <span class="background-star star-eight"></span>
+      <span class="background-star star-nine"></span>
+      <span class="background-star star-ten"></span>
+    </div>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="settings-nav-button" href="ATHENA.html">Home</a>
+        <div class="brand">Student access</div>
+        <a class="settings-nav-button" href="moderator.html">Admin</a>
+      </header>
+
+      <main class="main-content">
+        <div class="title-block">
+          <div class="hero-logo-frame">
+            <img class="brand-logo" src="image-1791727904673.png" alt="ATHENA.AI" />
+          </div>
+          <h2>Student access</h2>
+        </div>
+
+        <section class="student-access-panel" aria-label="Student account access">
+          <p class="student-access-note">Continue with a Google account with a verified email address. New accounts are created automatically.</p>
+          <div id="googleSignInButton" aria-label="Sign in with Google"></div>
+          <p id="studentAccessStatus" class="student-access-status" role="status" aria-live="polite"></p>
+        </section>
+      </main>
+    </div>
+
+    <script src="preferences.js"></script>
+    <script src="stars.js"></script>
+    <script src="cursor-trail.js"></script>
+    <script src="athena-config.js"></script>
+    <script src="password-toggle.js"></script>
+    <script src="student-access.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer onload="initializeGoogleSignIn()"></script>
+  </body>
+</html>
