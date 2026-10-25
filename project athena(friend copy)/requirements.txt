@@ -1,0 +1,8 @@
+fastapi
+email-validator
+google-auth
+google-genai
+pydantic
+python-dotenv
+pwdlib[argon2]
+uvicorn
